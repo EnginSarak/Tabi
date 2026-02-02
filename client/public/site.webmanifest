@@ -1,7 +1,7 @@
 {
   "name": "Tabi Currency Converter",
   "short_name": "Tabi",
-  "description": "Currency converter for EUR/JPY with Mastercard and Visa rates",
+  "description": "Currency converter for EUR/JPY",
   "start_url": "/",
   "scope": "/",
   "icons": [
