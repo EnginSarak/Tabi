@@ -1,11 +1,11 @@
 {
-  "name": "mimo-magic-starter",
+  "name": "tabi-app",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "build": "vite build && tsc --project tsconfig.server.json",
-    "start": "tsx watch scripts/dev.ts"
+    "build": "vite build",
+    "start": "vite"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "1.1.3",
@@ -32,16 +32,10 @@
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
-    "@types/express": "5.0.0",
-    "@types/node": "22.13.5",
-    "@types/react": "18.2.0",
-    "@types/react-dom": "18.2.0",
     "@vitejs/plugin-react": "4.3.4",
     "autoprefixer": "10.4.18",
-    "ignore": "7.0.3",
     "postcss": "8.4.35",
     "tailwindcss": "3.4.17",
-    "tsx": "4.19.3",
     "typescript": "5.8.2",
     "vite": "6.3.1"
   }
