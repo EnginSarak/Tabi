@@ -52,39 +52,13 @@ export default defineConfig(({ mode }) => {
         },
       },
     ].filter(Boolean),
-    resolve: {
+resolve: {
       alias: {
-        '@': path.resolve(__dirname, './client/src'),
+        '@': path.resolve(__dirname, './src'), // Geändert: './client/src' zu './src'
       },
     },
-    root: path.join(process.cwd(), 'client'),
+    root: './', // Geändert: Den langen Pfad zu './'
     build: {
-      outDir: path.join(process.cwd(), 'dist/public'),
+      outDir: '../dist/public', // Geändert: Damit der Build-Ordner außerhalb von client landet
       emptyOutDir: true,
     },
-    clearScreen: false,
-    server: {
-      hmr: {
-        overlay: false,
-      },
-      host: true,
-      port: vitePort,
-      allowedHosts: true,
-      cors: true, // Enable CORS in the dev server
-      proxy: {
-        '/api/': {
-          target: 'http://localhost:3001',
-          changeOrigin: true,
-        },
-      },
-    },
-    // Enable source maps for development
-    css: {
-      devSourcemap: true,
-    },
-    // Ensure source maps are properly generated
-    esbuild: {
-      sourcemap: true,
-    },
-  };
-});
